@@ -1,3 +1,12 @@
+import UserPublicDTO from "../dto/user.public.dto.js";
+
+export const readCb = (req, res) => {
+  const dto = new UserPublicDTO(req.user);
+  res.status(200).json({ status: "success", user: dto });
+};
+
+
+
 const createCb = (req, res, next) => {
   try {
     req.session.role = "ADMIN";
