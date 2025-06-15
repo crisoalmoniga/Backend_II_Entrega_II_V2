@@ -1,6 +1,7 @@
 import passport from "passport";
 import { Router } from "express";
-import { readCb } from "../controllers/sessions.controller.js";
+import { createCb, readCb, destroyCb } from "../../controllers/sessions.controller.js";
+
 
 const sessionsRouter = Router();
 
