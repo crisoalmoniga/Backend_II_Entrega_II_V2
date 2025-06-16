@@ -1,6 +1,8 @@
 import Product from "./models/products.model.js";
 import Cart from "./models/carts.model.js";
 import User from "./models/users.model.js";
+import Ticket from "./models/ticket.model.js";
+
 
 class Manager {
   constructor(model) {
@@ -17,5 +19,6 @@ class Manager {
 const productsManager = new Manager(Product);
 const cartsManager = new Manager(Cart);
 const usersManager = new Manager(User);
+const ticketManager = new Manager(Ticket);
 
-export { productsManager, cartsManager, usersManager };
+export { productsManager, cartsManager, usersManager, ticketManager };
