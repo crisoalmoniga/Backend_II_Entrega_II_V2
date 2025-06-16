@@ -11,10 +11,10 @@ class IndexRouter extends RouterHelper {
 
   init = () => {
     this.use("/", viewsRouter);
-    this.use("/api", apiRouter);
-    this.use("/api/recover", recoverRouter);
+    this.use("/api", apiRouter); // solo esto maneja todo lo de /api/*
   };
 }
+
 
 const indexRouter = new IndexRouter().getRouter();
 export default indexRouter;
